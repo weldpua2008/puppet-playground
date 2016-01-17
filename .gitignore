@@ -1,0 +1,14 @@
+.vagrant
+.librarian
+.tmp/
+/manifests/
+/modules/
+/Puppetfile.lock
+/Puppetfile
+*.swp
+*.swo
+*.pyc
+.coverage
+.idea/*
+.idea
+.tmp/*
