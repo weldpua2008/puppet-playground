@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.cache.auto_detect = true
+  #config.cache.auto_detect = true
   {
     :Centos72_64 => {
       :box     => 'bento/centos-7.2',
@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
     },
   }.each do |name,cfg|
     config.vm.define name do |local|
+      if Vagrant.has_plugin?("vagrant-cachier")
+         config.cache.scope = :box
+      end
       local.vm.box = cfg[:box]
       local.vm.box_url = cfg[:box_url]
 #      local.vm.boot_mode = :gui
