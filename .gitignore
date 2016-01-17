@@ -1,10 +1,5 @@
 .vagrant
 .tmp/
-/manifests/
-!/manifests/.placeholder
-/modules/
-!/modules/.placeholder
-
 /Puppetfile.lock
 /Puppetfile
 *.swp
